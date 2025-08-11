@@ -6,7 +6,7 @@ app = Flask(__name__)
 def form():
     return render_template('form.html')
 
-@app.route('submit', methods=['GET','POST'])
+@app.route('/submit', methods=['GET','POST'])
 def submit():
     full_name =request.form['fullName']
     id_number = request.form ['idNumber']
@@ -19,3 +19,4 @@ def submit():
 if __name__ == '__main__':
 
     app.run(debug=True)
+
